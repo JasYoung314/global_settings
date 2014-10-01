@@ -1,4 +1,4 @@
-"Syntax coloring for sage 
+"Syntax coloring for sage
 augroup filetypedetect
 	au! BufRead,BufNewFile *.sage,*.spyx,*.pyx setfiletype python
 augroup END
@@ -23,6 +23,7 @@ call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 filetype plugin indent on 
