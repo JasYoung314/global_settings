@@ -1,3 +1,7 @@
+"Syntax Highlighting for Mac os
+filetype plugin indent on
+syntax on
+
 "Syntax coloring for sage 
 augroup filetypedetect
 	au! BufRead,BufNewFile *.sage,*.spyx,*.pyx setfiletype python
@@ -16,12 +20,13 @@ set paste
 set nocompatible
 filetype off   
 
-" set the runtime path to include Vundle and initialize
+"Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle
+"Let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
+"Extra functionality
 Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
