@@ -2,10 +2,9 @@
 filetype plugin indent on
 syntax on
 
-"Syntax coloring for sage
-augroup filetypedetect
-	au! BufRead,BufNewFile *.sage,*.spyx,*.pyx setfiletype python
-augroup END
+""Syntax coloring for sage
+autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
+autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
 
 "Tab settings
 set smartindent
