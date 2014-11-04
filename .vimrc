@@ -2,6 +2,22 @@
 filetype plugin indent on
 syntax on
 
+"Line numbers
+set nu
+
+"Stops vim producing swp files
+set noswapfile
+
+"Kills arrow keys and productivity
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 ""Syntax coloring for sage
 autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
