@@ -115,4 +115,4 @@ fi
 
 
 alias open=gnome-open
-
+alias lh='ls --group-directories-first --hide=*pyc'
