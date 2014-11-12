@@ -28,6 +28,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+"line numbering
+set nu
+
 "Allows easy pasting
 set paste
 
@@ -43,6 +46,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 "Extra functionality
 Plugin 'tpope/vim-fugitive'
+"Smart Tabbing
 Plugin 'godlygeek/tabular'
 
 call vundle#end()
