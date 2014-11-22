@@ -48,7 +48,13 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 "Smart Tabbing
 Plugin 'godlygeek/tabular'
+"Syntastic is cool
+Plugin 'scrooloose/syntastic'
+"Im just going to install this and figure it out later
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on 
 
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
