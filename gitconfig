@@ -1,0 +1,11 @@
+[user]
+    email = jas.young314@gmail.com
+    name = jasonyoung
+[color]
+    ui = auto
+[alias]
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+[core]
+    editor = /usr/bin/vim
+[github]
+    user = JasYoung314
