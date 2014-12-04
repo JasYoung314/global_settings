@@ -50,8 +50,20 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 "Syntastic is cool
 Plugin 'scrooloose/syntastic'
-"Im just going to install this and figure it out later
+"File viewer in sidebar
 Plugin 'scrooloose/nerdtree'
+"Maps nerdtree Keys
+map <F9> :NERDTreeToggle<CR>
+" tagbar: to navigate all the tags of a file
+Plugin 'majutsushi/tagbar'
+" Mapping <F9> to get it to work
+nmap <F10> :TagbarToggle<CR>
+"Automatically uses pep8 when pressing <F8>
+Bundle 'tell-k/vim-autopep8'
+"Allows me to post code as a gist
+Plugin 'mattn/gist-vim'
+"Required for the gist plugin
+Plugin 'mattn/webapi-vim' 
 
 call vundle#end()
 filetype plugin indent on 
@@ -59,5 +71,3 @@ filetype plugin indent on
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 
-"Maps nerdtree Keys
-map <F10> :NERDTreeToggle<CR>
