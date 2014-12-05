@@ -1,5 +1,4 @@
-"Syntax Highlighting for Mac os
-filetype plugin indent on
+"sSyntax Highlighting for Mac os filetype plugin indent on
 syntax on
 
 "Line numbers
@@ -64,6 +63,8 @@ Bundle 'tell-k/vim-autopep8'
 Plugin 'mattn/gist-vim'
 "Required for the gist plugin
 Plugin 'mattn/webapi-vim' 
+" vim-tmux-navigator: allow vim navigation between tmux and vim
+Bundle 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on 
