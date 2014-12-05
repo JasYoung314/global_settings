@@ -5,9 +5,7 @@ On a new machine you'll need to run the following to use these files from this f
 .basrc and .vimrc
 
 ln -s link/to/your/folder/.vimrc ~/.vimrc
+
 ln -s link/to/your/folder/.bashrc ~/.bashrc
 
-.git ignore
-
-git config --global core.excludesfile 'link/to/your/folder/.gitignore'
-
+The git ignore is a generic template for a project, use with caution
