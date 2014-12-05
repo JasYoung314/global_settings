@@ -48,6 +48,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 "Smart Tabbing
 Plugin 'godlygeek/tabular'
+"Auto Pep8
+Plugin 'tell-k/vim-autopep8'
 
 call vundle#end()
 filetype plugin indent on 
