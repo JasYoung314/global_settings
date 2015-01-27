@@ -21,6 +21,7 @@ noremap   <Right>  <NOP>
 autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
 
+
 "Tab settings
 set smartindent
 set tabstop=4
@@ -49,6 +50,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 "Syntastic is cool
 Plugin 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
 "File viewer in sidebar
 Plugin 'scrooloose/nerdtree'
 "Maps nerdtree Keys
@@ -65,10 +68,10 @@ Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim' 
 " vim-tmux-navigator: allow vim navigation between tmux and vim
 Bundle 'christoomey/vim-tmux-navigator'
+"auto-completion
+Bundle 'git://github.com/davidhalter/jedi-vim'
 
 call vundle#end()
 filetype plugin indent on 
 
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
 
