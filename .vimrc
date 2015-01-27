@@ -1,4 +1,4 @@
-"sSyntax Highlighting for Mac os filetype plugin indent on
+"Syntax Highlighting for Mac os filetype plugin indent on
 syntax on
 
 "Line numbers
@@ -6,6 +6,11 @@ set nu
 
 "Stops vim producing swp files
 set noswapfile
+
+"Key Remappings
+"Setting the Yank Register
+nmap ; "0p
+
 
 "Kills arrow keys and productivity
 inoremap  <Up>     <NOP>
@@ -73,5 +78,3 @@ Bundle 'git://github.com/davidhalter/jedi-vim'
 
 call vundle#end()
 filetype plugin indent on 
-
-
