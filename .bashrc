@@ -61,11 +61,8 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\033[00m\]\[\033[01;34m\]$(parse_git_branch)\W\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}$(parse_git_branch)\W\$ '
-fi
+PS1='\[\e[1;32m\]$(parse_git_branch)\[\e[0m\] \W\$ '
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -123,17 +120,3 @@ alias open=gnome-open
 alias lh='ls --group-directories-first --hide=*pyc'
 
 
-export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
-if [ $? -eq 0 ]; then \
-  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
-  if [ "$?" -eq "0" ]; then \
-    # @4 - Clean repository - nothing to commit
-    echo "'$Green'"$(__git_ps1 " (%s)"); \
-  else \
-    # @5 - Changes to working tree
-    echo "'$IRed'"$(__git_ps1 " {%s}"); \
-  fi) '$BBlue$PathShort$Color_Off'\$ "; \
-else \
-  # @2 - Prompt when not in GIT repo
-  echo " '$Blue$PathShort$Color_Off'\$ "; \
-fi)'
