@@ -1,4 +1,4 @@
-"sSyntax Highlighting for Mac os filetype plugin indent on
+"Syntax Highlighting for Mac os filetype plugin indent on
 syntax on
 
 "Line numbers
@@ -6,6 +6,11 @@ set nu
 
 "Stops vim producing swp files
 set noswapfile
+
+"Key Remappings
+"Setting the Yank Register
+nmap ; "0p
+
 
 "Kills arrow keys and productivity
 inoremap  <Up>     <NOP>
@@ -20,6 +25,7 @@ noremap   <Right>  <NOP>
 ""Syntax coloring for sage
 autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
+
 
 "Tab settings
 set smartindent
@@ -49,6 +55,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 "Syntastic is cool
 Plugin 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
 "File viewer in sidebar
 Plugin 'scrooloose/nerdtree'
 "Maps nerdtree Keys
@@ -65,10 +73,8 @@ Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim' 
 " vim-tmux-navigator: allow vim navigation between tmux and vim
 Bundle 'christoomey/vim-tmux-navigator'
+"auto-completion
+Bundle 'git://github.com/davidhalter/jedi-vim'
 
 call vundle#end()
 filetype plugin indent on 
-
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-
