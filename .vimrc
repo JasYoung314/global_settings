@@ -1,16 +1,20 @@
 "Syntax Highlighting for Mac os filetype plugin indent on
 syntax on
 
-"Line numbers
+"Line numbers 
 set nu
-
+ 
 "Stops vim producing swp files
 set noswapfile
 
 "Key Remappings
 "Setting the Yank Register
 nmap ; "0p
-
+"Changes my key for addtion in vim 18
+nnoremap <S-z> <C-x>
+nnoremap <S-x> <C-a>
+"Sets shortcut for macro associated with Q
+nnoremap <Space> @q
 
 "Kills arrow keys and productivity
 inoremap  <Up>     <NOP>
