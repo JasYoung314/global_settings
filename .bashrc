@@ -56,11 +56,13 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\W\$ '
-fi
+#Adds git branch to promt 
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1='\[\e[1;32m\]$(parse_git_branch)\[\e[0m\] \W\$ '
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -116,3 +118,5 @@ fi
 
 alias open=gnome-open
 alias lh='ls --group-directories-first --hide=*pyc'
+
+
