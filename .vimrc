@@ -30,6 +30,10 @@ noremap   <Right>  <NOP>
 autocmd BufRead,BufNewFile,BufWritePost *.sage set filetype=python
 autocmd BufRead,BufNewFile,BufWritePost *.spyx,*.pyx set filetype=python.c
 
+""Enables solarized
+syntax enable
+set background=dark
+colorscheme solarized
 
 "Tab settings
 set smartindent
