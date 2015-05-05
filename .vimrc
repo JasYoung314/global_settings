@@ -1,5 +1,11 @@
+set spell
+autocmd BufRead,BufNewFile,BufWritePost *.py set nospell
+
 "Syntax Highlighting for Mac os filetype plugin indent on
 syntax on
+
+"Stops fish freaking out with syntastic
+set shell=bash
 
 "Line numbers 
 set nu
